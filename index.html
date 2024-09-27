@@ -25,7 +25,7 @@
 </head>
 <body>
 
-    <h1>كم ثانية مرت منذ هدف ناصر منسي في السوبر الأفريقي على حساب الأهلي؟</h1>
+    <h1>كم جمعة مرت منذ هدف ناصر منسي في السوبر الأفريقي على حساب الأهلي؟</h1>
     <div id="time-elapsed">جارٍ الحساب...</div>
 
     <script>
@@ -36,12 +36,13 @@
 
             const timeDiff = now - startTime; // الفارق بالمللي ثانية
 
+            const weeks = Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 7)); // عدد الجمعات (الأسابيع)
             const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
             const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
-            document.getElementById('time-elapsed').textContent = `${days} يوم، ${hours} ساعة، ${minutes} دقيقة، ${seconds} ثانية`;
+            document.getElementById('time-elapsed').textContent = `${weeks} جمعة، ${days} يوم، ${hours} ساعة، ${minutes} دقيقة، ${seconds} ثانية`;
         }
 
         // تحديث كل ثانية
